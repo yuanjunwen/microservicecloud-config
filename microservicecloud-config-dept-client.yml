@@ -2,14 +2,13 @@ spring:
   profiles:
     active:
       - devOne
----
-server:
-  port: 8001
-
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
   type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
   mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
+---
+server:
+  port: 8001
 
 spring:
   profiles: devOne
@@ -44,10 +43,10 @@ info:
 server:
   port: 8002
 
-mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
-  type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
-  mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
+#mybatis:
+#  config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
+#  type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
+#  mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
 
 spring:
   profiles: devTwo
@@ -82,10 +81,10 @@ info:
 server:
   port: 8003
 
-mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
-  type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
-  mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
+#mybatis:
+#  config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
+#  type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
+#  mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
 
 spring:
   profiles: devThree
