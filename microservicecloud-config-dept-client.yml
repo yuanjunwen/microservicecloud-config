@@ -34,12 +34,6 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8001                           #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
-
-info:
-  app.name: yjw-microservicecloud
-  company.name: www.yjw.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
 ---
 server:
   port: 8002
@@ -73,11 +67,6 @@ eureka:
     instance-id: microservicecloud-dept8002                           #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
 
-info:
-  app.name: yjw-microservicecloud
-  company.name: www.yjw.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
 ---
 server:
   port: 8003
@@ -111,10 +100,5 @@ eureka:
     instance-id: microservicecloud-dept8003                          #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
 
-info:
-  app.name: yjw-microservicecloud
-  company.name: www.yjw.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
 
 
