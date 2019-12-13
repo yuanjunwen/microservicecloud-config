@@ -1,7 +1,7 @@
 spring:
   profiles:
     active:
-    -deptOne
+    - deptOne
 ---
 server:
   port: 8001
