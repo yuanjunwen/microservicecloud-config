@@ -14,7 +14,6 @@ mybatis:
 spring:
   proflies: deptOne
   application:
-    name: microservicecloud-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource                      # 当前数据库源操作类
     driver-class-name: org.gjt.mm.mysql.Driver                        #mysql驱动包
@@ -52,7 +51,6 @@ mybatis:
 spring:
   proflies: deptTwo
   application:
-    name: microservicecloud-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource                      # 当前数据库源操作类
     driver-class-name: org.gjt.mm.mysql.Driver                        #mysql驱动包
