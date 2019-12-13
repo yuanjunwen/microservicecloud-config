@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: microservicecloud-config-dept-client
   profiles:
     active:
       - devOne
@@ -32,8 +34,6 @@ server:
 
 spring:
   profiles: devOne
-  application:
-    name: microservicecloud-config-dept-client
   datasource:                                                         # 当前数据库源操作类
     url: jdbc:mysql://172.17.255.228:3306/clouddb01                   #数据库名称
 
@@ -47,26 +47,12 @@ server:
 
 spring:
   profiles: devTwo
-  application:
-    name: microservicecloud-config-dept-client
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource                      # 当前数据库源操作类
-    driver-class-name: org.gjt.mm.mysql.Driver                        #mysql驱动包
+  datasource:                                                         # 当前数据库源操作类
     url: jdbc:mysql://172.17.255.228:3306/clouddb02                   #数据库名称
-    username: root
-    password: 123456
-    dbcp2:
-      min-idle: 5                                                     #数据库连接池最小值
-      initial-size: 5                                                 #初始化连接数
-      max-total: 5                                                    #最大连接数
-      max-wait-millis: 200                                            #等待连接获取的最大超时时间
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/                      #将服务注册进eureka
   instance:
-    instance-id: microservicecloud-dept8002                          #注册中心中指定服务名字
+    instance-id: microservicecloud-dept8002                           #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
 ---
 server:
@@ -74,24 +60,10 @@ server:
 
 spring:
   profiles: devThree
-  application:
-    name: microservicecloud-config-dept-client
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource                      # 当前数据库源操作类
-    driver-class-name: org.gjt.mm.mysql.Driver                        #mysql驱动包
+  datasource:                                                         # 当前数据库源操作类
     url: jdbc:mysql://172.17.255.228:3306/clouddb03                   #数据库名称
-    username: root
-    password: 123456
-    dbcp2:
-      min-idle: 5                                                     #数据库连接池最小值
-      initial-size: 5                                                 #初始化连接数
-      max-total: 5                                                    #最大连接数
-      max-wait-millis: 200                                            #等待连接获取的最大超时时间
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/                      #将服务注册进eureka
   instance:
     instance-id: microservicecloud-dept8003                           #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
