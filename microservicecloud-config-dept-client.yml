@@ -6,6 +6,15 @@ mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
   type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
   mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
+info:
+  app.name: yjw-microservicecloud
+  company.name: www.yjw.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/                      #将服务注册进eureka
 ---
 server:
   port: 8001
@@ -27,26 +36,12 @@ spring:
       max-wait-millis: 200                                            #等待连接获取的最大超时时间
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/                      #将服务注册进eureka
   instance:
     instance-id: microservicecloud-dept8001                           #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
-
-info:
-  app.name: yjw-microservicecloud
-  company.name: www.yjw.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
 ---
 server:
   port: 8002
-
-#mybatis:
-#  config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
-#  type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
-#  mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
 
 spring:
   profiles: devTwo
@@ -71,20 +66,9 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8002                          #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
-
-info:
-  app.name: yjw-microservicecloud
-  company.name: www.yjw.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
 ---
 server:
   port: 8003
-
-#mybatis:
-#  config-location: classpath:mybatis/mybatis.cfg.xml                  #mybatis配置文件
-#  type-aliases-package: com.yjw.springcloud.entities                  #所有Entity别名
-#  mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
 
 spring:
   profiles: devThree
@@ -109,9 +93,3 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8003                           #注册中心中指定服务名字
     prefer-ip-address: true                                           #显示服务IP
-
-info:
-  app.name: yjw-microservicecloud
-  company.name: www.yjw.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
