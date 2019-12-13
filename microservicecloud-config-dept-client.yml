@@ -1,7 +1,7 @@
 spring:
   profiles:
     active:
-      - dept8001
+      - deptOne
 ---
 server:
   port: 8001
@@ -12,7 +12,7 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
 
 spring:
-  proflies: dept8001
+  proflies: deptOne
   application:
     name: microservicecloud-dept
   datasource:
@@ -50,7 +50,7 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
 
 spring:
-  proflies: dept8002
+  proflies: deptTwo
   application:
     name: microservicecloud-dept
   datasource:
@@ -88,7 +88,7 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/**/*.xml               #mapper映射文件
 
 spring:
-  proflies: dept8003
+  proflies: deptThree
   application:
     name: microservicecloud-dept
   datasource:
